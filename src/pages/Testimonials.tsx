@@ -26,7 +26,7 @@ export default function TestimonialsPage() {
       </section>
       {" "}
       <section style={{ background: "#F5F7FA", color: "#1F2937", padding: "96px 32px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: "40px", alignItems: "center" }}>
+        <div style={{ maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: "40px", alignItems: "center" }}>
           <div data-reveal="1">
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", fontSize: "14px", letterSpacing: ".14em", textTransform: "uppercase", fontWeight: "700", color: "#1C4581", marginBottom: "16px" }}>
               <span style={{ width: "56px", height: "1px", background: "#1C4581" }} />
