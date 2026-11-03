@@ -32,17 +32,27 @@ function loadGoogleTranslate() {
   document.body.appendChild(s);
 }
 
-/** Wait for Google's hidden language <select>, then switch it. */
-function applyLang(lang: Lang, onDone?: () => void) {
-  let tries = 0;
-  const t = window.setInterval(() => {
-    const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
-    if (select || ++tries > 50) window.clearInterval(t);
-    if (!select) return;
-    select.value = lang;
-    select.dispatchEvent(new Event("change", { bubbles: true }));
-    onDone?.();
-  }, 200);
+/** Google reads this cookie on page load and translates automatically. */
+function setCookie(lang: Lang) {
+  const host = location.hostname;
+  const domains = ["", host, "." + host.split(".").slice(-2).join(".")];
+  for (const d of domains) {
+    const dom = d ? ";domain=" + d : "";
+    document.cookie = lang === "es"
+      ? "googtrans=/en/es;path=/" + dom
+      : "googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT" + dom;
+  }
+}
+
+const isTranslated = () => /translated-(ltr|rtl)/.test(document.documentElement.className);
+
+/** Switch Google's hidden language menu once it has the Spanish option. */
+function switchViaWidget(): boolean {
+  const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
+  if (!select || ![...select.options].some((o) => o.value === "es")) return false;
+  select.value = "es";
+  select.dispatchEvent(new Event("change", { bubbles: true }));
+  return true;
 }
 
 export default function LanguageToggle() {
@@ -55,11 +65,24 @@ export default function LanguageToggle() {
 
   const toggle = useCallback(() => {
     if (busy.current) return;
-    const next: Lang = lang === "en" ? "es" : "en";
     busy.current = true;
+    if (lang === "es") {
+      // Undoing Google's translation in place is unreliable; clear the choice and reload.
+      setCookie("en");
+      location.reload();
+      return;
+    }
+    setLang("es");
+    setCookie("es");
     loadGoogleTranslate();
-    applyLang(next, () => { busy.current = false; });
-    setLang(next);
+    // Try the instant switch; if the page isn't translated after a few seconds
+    // (slow script, menu not ready), reload so Google applies the cookie itself.
+    const started = Date.now();
+    const t = window.setInterval(() => {
+      if (isTranslated()) { window.clearInterval(t); busy.current = false; return; }
+      switchViaWidget();
+      if (Date.now() - started > 4000) { window.clearInterval(t); location.reload(); }
+    }, 250);
   }, [lang]);
 
   return (
