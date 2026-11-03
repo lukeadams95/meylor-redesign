@@ -5,6 +5,9 @@ import { HelmetProvider } from "react-helmet-async";
 import App from "./App";
 import "./styles/global.css";
 import "./styles/hover.css";
+import { installTranslateGuard } from "./lib/translateGuard";
+
+installTranslateGuard();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

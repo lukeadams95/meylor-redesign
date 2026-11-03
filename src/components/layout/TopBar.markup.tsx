@@ -1,6 +1,7 @@
 // Generated from the Claude Design prototype (Meylor Chiropractic Home.dc.html).
 // Markup and inline styles are kept 1:1 with the design.
 import { Link } from "react-router-dom";
+import LanguageToggle from "./LanguageToggle";
 
 export default function TopBarMarkup() {
   return (
@@ -15,12 +16,7 @@ export default function TopBarMarkup() {
           12980 W 87th St Pkwy, Lenexa, KS 66215
         </a>
         {" "}
-        <span style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-          <span style={{ width: "20px", height: "13px", background: "repeating-linear-gradient(#b22 0 1.2px,#fff 1.2px 2.4px)", position: "relative", display: "inline-block" }}>
-            <span style={{ position: "absolute", left: "0", top: "0", width: "9px", height: "7px", background: "#2a4a8a" }} />
-          </span>
-          English (US)
-        </span>
+        <LanguageToggle />
       </div>
       {" "}
       <Link to="/services/auto-injury-relief/" style={{ color: "#fff", fontWeight: "700" }}>
