@@ -304,7 +304,7 @@ export default function HomePage() {
       {/* TESTIMONIALS */}
       {" "}
       <section style={{ background: "#15315A", color: "#F5F7FA", padding: "96px 32px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: "40px", alignItems: "center" }}>
+        <div style={{ maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: "40px", alignItems: "center" }}>
           <div data-reveal="1">
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", fontSize: "14px", letterSpacing: ".14em", textTransform: "uppercase", fontWeight: "700", color: "#E3E8EF", marginBottom: "16px" }}>
               <span style={{ width: "56px", height: "1px", background: "#E3E8EF" }} />
