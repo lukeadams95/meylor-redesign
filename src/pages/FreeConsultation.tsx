@@ -1,7 +1,7 @@
 // Generated from the Claude Design prototype (Meylor Chiropractic Home.dc.html).
 // Markup and inline styles are kept 1:1 with the design.
 import Seo from "../components/Seo";
-import { preventSubmit } from "../lib/forms";
+import ConsultationForm, { CTA_LABEL } from "../components/ConsultationForm";
 
 export default function FreeConsultationPage() {
 
@@ -64,56 +64,12 @@ export default function FreeConsultationPage() {
               </li>
             </ul>
             {" "}
-            <a className="h-d1471fa" href="#fcform" data-scroll="fcform" style={{ display: "inline-block", background: "#1C4581", color: "#fff", padding: "16px 30px", borderRadius: "999px", fontWeight: "700", fontSize: "17px" }}>
-              Schedule Now
+            <a className="h-d1471fa press" href="#fcform" data-scroll="fcform" style={{ display: "inline-block", background: "#1C4581", color: "#fff", padding: "16px 30px", borderRadius: "999px", fontWeight: "700", fontSize: "17px" }}>
+              {CTA_LABEL}
             </a>
           </div>
           {" "}
-          <form id="fcform" style={{ background: "#1C4581", borderRadius: "28px", padding: "clamp(28px,3.4vw,44px)", display: "grid", gap: "24px", boxShadow: "0 30px 60px -30px rgba(21,49,90,.5)", alignContent: "start" }} onSubmit={preventSubmit}>
-            <h2 style={{ fontFamily: "Arial,Helvetica,sans-serif", fontWeight: "700", letterSpacing: "-.02em", color: "#fff", fontSize: "clamp(26px,2.6vw,34px)", lineHeight: "1.1", margin: "0" }}>
-              Book Your Free Consultation
-            </h2>
-            {" "}
-            <div style={{ display: "grid", gap: "18px" }}>
-              <label style={{ display: "grid", gap: "2px" }}>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#E3E8EF" }}>
-                  Name *
-                </span>
-                <input className="fi" required />
-              </label>
-              <label style={{ display: "grid", gap: "2px" }}>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#E3E8EF" }}>
-                  Email *
-                </span>
-                <input className="fi" type="email" required />
-              </label>
-              <label style={{ display: "grid", gap: "2px" }}>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#E3E8EF" }}>
-                  Phone *
-                </span>
-                <input className="fi" type="tel" required />
-              </label>
-              <label style={{ display: "grid", gap: "2px" }}>
-                <span style={{ fontSize: "14px", fontWeight: "700", color: "#E3E8EF" }}>
-                  How can we help?
-                </span>
-                <input className="fi" />
-              </label>
-            </div>
-            {" "}
-            <button className="h-abc0814" type="button" style={{ font: "inherit", fontWeight: "700", fontSize: "clamp(14px,4vw,16px)", background: "#fff", color: "#15315A", border: "0", borderRadius: "999px", padding: "6px 6px 6px 20px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", width: "100%" }}>
-              <span style={{ flex: "1", textAlign: "center", whiteSpace: "nowrap" }}>
-                Get My Free Consultation
-              </span>
-              <span style={{ width: "40px", height: "40px", borderRadius: "50%", background: "#15315A", color: "#fff", display: "grid", placeItems: "center", fontSize: "18px" }}>
-                →
-              </span>
-            </button>
-            {" "}
-            <div style={{ fontSize: "13px", color: "#E3E8EF", textAlign: "center", marginTop: "-10px" }}>
-              {"Your information is safe & confidential. No spam, ever."}
-            </div>
-          </form>
+          <ConsultationForm />
         </div>
       </section>
       {" "}
@@ -136,7 +92,7 @@ export default function FreeConsultationPage() {
             {" "}
             <div style={{ display: "grid", gap: "14px" }}>
               <div style={{ background: "#fff", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "22px 26px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px" }}>
+                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px", fontVariantNumeric: "tabular-nums" }}>
                   1
                 </div>
                 <div>
@@ -150,7 +106,7 @@ export default function FreeConsultationPage() {
               </div>
               {" "}
               <div style={{ background: "#fff", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "22px 26px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px" }}>
+                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px", fontVariantNumeric: "tabular-nums" }}>
                   2
                 </div>
                 <div>
@@ -164,7 +120,7 @@ export default function FreeConsultationPage() {
               </div>
               {" "}
               <div style={{ background: "#fff", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "22px 26px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px" }}>
+                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px", fontVariantNumeric: "tabular-nums" }}>
                   3
                 </div>
                 <div>
@@ -178,7 +134,7 @@ export default function FreeConsultationPage() {
               </div>
               {" "}
               <div style={{ background: "#fff", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "22px 26px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px" }}>
+                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px", fontVariantNumeric: "tabular-nums" }}>
                   4
                 </div>
                 <div>
@@ -192,7 +148,7 @@ export default function FreeConsultationPage() {
               </div>
               {" "}
               <div style={{ background: "#fff", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "22px 26px", display: "flex", gap: "20px", alignItems: "flex-start" }}>
-                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px" }}>
+                <div style={{ flex: "none", width: "48px", height: "48px", borderRadius: "50%", background: "#1C4581", color: "#fff", display: "grid", placeItems: "center", fontWeight: "700", fontSize: "19px", fontVariantNumeric: "tabular-nums" }}>
                   5
                 </div>
                 <div>
@@ -206,7 +162,7 @@ export default function FreeConsultationPage() {
               </div>
             </div>
             {" "}
-            <div style={{ marginTop: "24px", background: "#E3E8EF", borderRadius: "20px", padding: "20px 24px", fontSize: "16.5px", lineHeight: "1.6", color: "#15315A" }}>
+            <div style={{ marginTop: "24px", background: "#E3E8EF", borderRadius: "24px", padding: "20px 24px", fontSize: "16.5px", lineHeight: "1.6", color: "#15315A" }}>
               <strong>
                 Please note:
               </strong>
@@ -237,7 +193,7 @@ export default function FreeConsultationPage() {
           </div>
           {" "}
           <ul data-reveal="1" style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,320px),1fr))", gap: "16px" }}>
-            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "20px", padding: "20px 22px" }}>
+            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "20px 22px" }}>
               <span style={{ flex: "none", width: "26px", height: "26px", borderRadius: "50%", background: "#1C4581", display: "grid", placeItems: "center", marginTop: "-1px" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 6 9 17l-5-5" />
@@ -245,7 +201,7 @@ export default function FreeConsultationPage() {
               </span>
               Struggling with neck or back pain
             </li>
-            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "20px", padding: "20px 22px" }}>
+            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "20px 22px" }}>
               <span style={{ flex: "none", width: "26px", height: "26px", borderRadius: "50%", background: "#1C4581", display: "grid", placeItems: "center", marginTop: "-1px" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 6 9 17l-5-5" />
@@ -253,7 +209,7 @@ export default function FreeConsultationPage() {
               </span>
               Recovering from a car accident
             </li>
-            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "20px", padding: "20px 22px" }}>
+            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "20px 22px" }}>
               <span style={{ flex: "none", width: "26px", height: "26px", borderRadius: "50%", background: "#1C4581", display: "grid", placeItems: "center", marginTop: "-1px" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 6 9 17l-5-5" />
@@ -261,7 +217,7 @@ export default function FreeConsultationPage() {
               </span>
               Interested in acupuncture for stress or pain relief
             </li>
-            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "20px", padding: "20px 22px" }}>
+            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "20px 22px" }}>
               <span style={{ flex: "none", width: "26px", height: "26px", borderRadius: "50%", background: "#1C4581", display: "grid", placeItems: "center", marginTop: "-1px" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 6 9 17l-5-5" />
@@ -269,7 +225,7 @@ export default function FreeConsultationPage() {
               </span>
               Athletes or golfers looking for performance support
             </li>
-            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "20px", padding: "20px 22px" }}>
+            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "20px 22px" }}>
               <span style={{ flex: "none", width: "26px", height: "26px", borderRadius: "50%", background: "#1C4581", display: "grid", placeItems: "center", marginTop: "-1px" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 6 9 17l-5-5" />
@@ -277,7 +233,7 @@ export default function FreeConsultationPage() {
               </span>
               Parents seeking chiropractic care for children
             </li>
-            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "20px", padding: "20px 22px" }}>
+            <li style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "17px", lineHeight: "1.5", color: "#1F2937", background: "#F5F7FA", border: "1px solid #E3E8EF", borderRadius: "24px", padding: "20px 22px" }}>
               <span style={{ flex: "none", width: "26px", height: "26px", borderRadius: "50%", background: "#1C4581", display: "grid", placeItems: "center", marginTop: "-1px" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 6 9 17l-5-5" />
@@ -288,8 +244,8 @@ export default function FreeConsultationPage() {
           </ul>
           {" "}
           <div data-reveal="1" style={{ marginTop: "40px", textAlign: "center" }}>
-            <a className="h-d1471fa" href="#fcform" data-scroll="fcform" style={{ display: "inline-block", background: "#1C4581", color: "#fff", padding: "16px 30px", borderRadius: "999px", fontWeight: "700", fontSize: "17px" }}>
-              Schedule Now
+            <a className="h-d1471fa press" href="#fcform" data-scroll="fcform" style={{ display: "inline-block", background: "#1C4581", color: "#fff", padding: "16px 30px", borderRadius: "999px", fontWeight: "700", fontSize: "17px" }}>
+              {CTA_LABEL}
             </a>
           </div>
         </div>
@@ -314,10 +270,10 @@ export default function FreeConsultationPage() {
           </p>
           {" "}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: "center" }}>
-            <a className="h-abc0814" href="#fcform" data-scroll="fcform" style={{ display: "inline-block", background: "#fff", color: "#15315A", padding: "16px 30px", borderRadius: "999px", fontWeight: "700", fontSize: "17px" }}>
-              Schedule Now
+            <a className="h-abc0814 press" href="#fcform" data-scroll="fcform" style={{ display: "inline-block", background: "#fff", color: "#15315A", padding: "16px 30px", borderRadius: "999px", fontWeight: "700", fontSize: "17px" }}>
+              {CTA_LABEL}
             </a>
-            <a className="h-d1471fa" href="tel:9132270909" style={{ display: "inline-block", whiteSpace: "nowrap", color: "#fff", padding: "15px 30px", borderRadius: "999px", border: "1.5px solid #fff", fontWeight: "700", fontSize: "17px" }}>
+            <a className="h-ghost press" href="tel:9132270909" style={{ display: "inline-block", whiteSpace: "nowrap", color: "#fff", padding: "15px 30px", borderRadius: "999px", border: "1.5px solid #fff", fontWeight: "700", fontSize: "17px" }}>
               (913) 227-0909
             </a>
           </div>

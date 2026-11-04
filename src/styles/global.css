@@ -35,3 +35,7 @@ a.dd-i[data-active]{background:#E3E8EF!important;box-shadow:inset 3px 0 0 #1C458
 #google_translate_element,.goog-te-banner-frame,.goog-te-balloon-frame,.goog-te-gadget-icon,.goog-te-combo,.skiptranslate,#goog-gt-tt,.goog-tooltip{display:none!important}
 body{top:0!important}
 .goog-text-highlight{background:none!important;box-shadow:none!important}
+/* Press feedback: lands on press-in, short strong ease-out; off for Reduce Motion. */
+.press{transition:transform .12s cubic-bezier(.23,1,.32,1),background-color .15s ease-out}
+.press:active:not(:disabled){transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){.press{transition:none}.press:active:not(:disabled){transform:none}}

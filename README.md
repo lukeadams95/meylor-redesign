@@ -53,8 +53,11 @@ prototype element for element. It is ordinary TSX now, so edit it directly.
 
 These come from the design as-is:
 
-- **Forms** (homepage, Contact, Free Consultation) only display. Submitting does nothing, and
-  nothing is sent anywhere.
+- **Forms** on the homepage and Contact page only display. Submitting does nothing, and nothing
+  is sent anywhere.
+- **Free Consultation form** checks its fields and shows clear error, sending, sent and failed
+  states. It sends to the URL in `VITE_CONSULTATION_ENDPOINT` (any form backend that accepts a JSON
+  POST). Until that is set, a filled-in form tells the visitor to call (913) 227-0909 instead.
 - **No 404 page.** As in the prototype, an unknown address shows the homepage.
 - The homepage "Areas We Serve" pills link to `/areas/<city>/`, which is how they are in the design.
   The city pages themselves live at `/<city>/` (for example `/lenexa/`).
